@@ -1,4 +1,5 @@
 //compileCompressed: ../style.min.css
+
 html, body{
   width: 100%;
   height: 100%;
@@ -132,5 +133,70 @@ p, div {
     p{
       margin: 0 0 20px;
     }
+  }
+
+}
+
+
+.work{
+  background: rgba(255,255,255,1) url('../images/work-bg.jpg');
+  background-position: left;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  padding: 100px 30px;
+  color: #fff;
+  font-family: "Montserrat";
+
+  h1{
+    text-transform: uppercase;
+    font-size: 4em;
+    font-weight: bolder;
+    letter-spacing: 2px;
+  }
+}
+
+.contact{
+  background: #505050;
+  background-position: left;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  color: #fff;
+  font-family: "Montserrat";
+  text-align: center;
+
+  .diamonds{
+    position: absolute;
+    display: block;
+    background: url('../images/diamonds.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: top;
+    width: 100%;
+    height: 70%;
+    margin-top: -50px;
+  }
+
+  .content{
+    padding: 200px 30px;
+    display: block;
+    background: url('../images/diamonds.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: top center;
+    width: 100%;
+    margin-top: -50px;
+  }
+
+  h1{
+    text-transform: uppercase;
+    font-size: 4em;
+    font-weight: bolder;
+    letter-spacing: 2px;
+  }
+
+  .line{
+    margin: 48px auto;
   }
 }
