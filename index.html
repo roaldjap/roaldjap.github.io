@@ -10,10 +10,14 @@
   <link rel="icon" type="image/x-icon" href="icon/favicon.ico" sizes="16x16" />
   <link rel="icon" type="image/png" href="icon/favicon-32x32.png" sizes="32x32" />
   <link rel="icon" type="image/png" href="icon/favicon-16x16.png" sizes="16x16" />
+  <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700|Montserrat:400,700" rel="stylesheet">
+
   <!-- Script -->
   <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
   <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="bower_components/jquery.nicescroll/dist/jquery.nicescroll.min.js"></script>
   <script src="bower_components/smooth-scroll/dist/js/smooth-scroll.js"></script>
+  <script type="text/javascript" src="js/be.js/be.js"></script>
 
   <!-- Stylesheet  -->
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
@@ -80,8 +84,8 @@
           </div>
           <div class="col-lg-7">
             <div class="right-column">
-              <p>Arts, Design, Games & Technology are my interests. It gives me inspiration to create awesome ideas andI am still exploring new things on those field.</p>
-              <p>I stand for both design and code and It is my privilege for me to create beautiful & functional interfaces for you.</p>
+              <p>Arts, Design, Games & Technology are my interests. It gives me inspiration to create awesome ideas.</p>
+              <p>I stand for both design and code and it is my privilege for me to create beautiful & functional interfaces for you.</p>
             </div>
           </div>
         </div>
@@ -117,9 +121,9 @@
               Let’s get in touch! Want to discuss your ideas for a project? I would love to hear from you.
               Just contact me via the details below:
               <ul class="contact-list">
-                <li>+63 906 553 9147</li>
-                <li>roaldjap@gmail.com</li>
-                <li>facebook.com/roaldjap</li>
+                <li class="mobile">+63 906 553 9147</li>
+                <li class="email">roaldjap@gmail.com</li>
+                <li class="facebook">facebook.com/roaldjap</li>
               </ul>
             </p>
             </div>
@@ -130,9 +134,25 @@
     </div>
   </div>
 
-  <!-- Initialize Script -->
-  <script>
-    smoothScroll.init();
+  <!-- Initialize-->
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("html").niceScroll();
+      smoothScroll.init();
+      // Using promises
+      be('2B4ovyUUsiJQcUcnAZYUaBnx6UpsWuaE')
+      .project.search('cats')
+      .then(function success(results) {
+       console.log(results);
+      }, function failure(error) {
+       console.error(error);
+      });
+
+      // Using callbacks
+      be.project.search('dogs', function success(results) {
+       console.log(results);
+      });
+    });
   </script>
 </body>
 </html>
