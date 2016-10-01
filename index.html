@@ -7,9 +7,12 @@
   <title>Roald Ignacio - Front-End Designer, Geek, Hobbyist, Tech &amp; Game Enthusiast.</title>
 
   <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="icon/favicon.ico" sizes="16x16" />
-  <link rel="icon" type="image/png" href="icon/favicon-32x32.png" sizes="32x32" />
-  <link rel="icon" type="image/png" href="icon/favicon-16x16.png" sizes="16x16" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="images/favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="images/favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="images/favicons//manifest.json">
+  <link rel="mask-icon" href="images/favicons//safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="theme-color" content="#ffffff">
   <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700|Montserrat:400,700" rel="stylesheet">
 
   <!-- Script -->
@@ -141,17 +144,13 @@
       smoothScroll.init();
       // Using promises
       be('2B4ovyUUsiJQcUcnAZYUaBnx6UpsWuaE')
-      .project.search('cats')
+      .users.user('roaldjap')
       .then(function success(results) {
        console.log(results);
       }, function failure(error) {
        console.error(error);
       });
 
-      // Using callbacks
-      be.project.search('dogs', function success(results) {
-       console.log(results);
-      });
     });
   </script>
 </body>
