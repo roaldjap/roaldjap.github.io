@@ -13,18 +13,20 @@
   <link rel="manifest" href="images/favicons//manifest.json">
   <link rel="mask-icon" href="images/favicons//safari-pinned-tab.svg" color="#5bbad5">
   <meta name="theme-color" content="#ffffff">
-  <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700|Montserrat:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700|Montserrat:400,700|Open+Sans:300,400" rel="stylesheet">
 
   <!-- Script -->
   <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
   <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="bower_components/jquery.nicescroll/dist/jquery.nicescroll.min.js"></script>
-  <script src="bower_components/smooth-scroll/dist/js/smooth-scroll.js"></script>
+
   <script type="text/javascript" src="js/be.js/be.js"></script>
 
   <!-- Stylesheet  -->
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css" media="screen" title="no title" charset="utf-8">
   <link rel="stylesheet" href="css/style.min.css" media="screen" title="no title" charset="utf-8">
+
 
 </head>
 <body>
@@ -48,16 +50,16 @@
 
         <ul id="navbar" class="nav navbar-nav navbar-right">
           <li>
-            <a href="">Home</a>
+            <a data-scroll href="#home">Home</a>
           </li>
           <li>
-            <a href="">About</a>
+            <a data-scroll href="#about">About</a>
           </li>
           <li>
-            <a href="">Work</a>
+            <a data-scroll href="#work">Work</a>
           </li>
           <li>
-            <a href="">Contact</a>
+            <a data-scroll href="#contact">Contact</a>
           </li>
         </ul>
 
@@ -65,11 +67,11 @@
   </nav>
 
   <!-- Home -->
-  <div class="home">
+  <div id="home" class="home">
   </div>
 
   <!-- About -->
-  <div class="about">
+  <div id="about" class="about">
     <div class="row">
       <div class="container">
         <div class="row">
@@ -97,7 +99,7 @@
   </div>
 
   <!-- Work -->
-  <div class="work">
+  <div id="work" class="work">
     <div class="row">
       <div class="container">
         <div class="row">
@@ -110,7 +112,7 @@
     </div>
   </div>
 
-  <div class="contact">
+  <div id="contact" class="contact">
     <div class="diamonds"></div>
     <div class="content">
     <div class="row">
@@ -123,12 +125,12 @@
             <p>
               Let’s get in touch! Want to discuss your ideas for a project? I would love to hear from you.
               Just contact me via the details below:
-              <ul class="contact-list">
-                <li class="mobile">+63 906 553 9147</li>
-                <li class="email">roaldjap@gmail.com</li>
-                <li class="facebook">facebook.com/roaldjap</li>
-              </ul>
             </p>
+            <ul class="contact-list">
+              <li class="mobile"><i class="fa fa-mobile"></i> +63 906 553 9147</li>
+              <li class="email"> <i class="fa fa-envelope"></i> roaldjap@gmail.com</li>
+              <li class="facebook"><i class="fa fa-facebook"></i> facebook.com/roaldjap</li>
+            </ul>
             </div>
           </div>
         </div>
@@ -136,20 +138,27 @@
     </div>
     </div>
   </div>
-
+  
+  <!-- Footer -->
+  <footer>
+    <p>
+      &copy; 2016 - Designed and Developed By <b>Roald Jap Ignacio</b>
+    </p>
+  </footer>
   <!-- Initialize-->
+  <script src="bower_components/smooth-scroll/dist/js/smooth-scroll.js"></script>
   <script type="text/javascript">
     $(document).ready(function() {
       $("html").niceScroll();
       smoothScroll.init();
       // Using promises
-      be('2B4ovyUUsiJQcUcnAZYUaBnx6UpsWuaE')
-      .users.user('roaldjap')
-      .then(function success(results) {
-       console.log(results);
-      }, function failure(error) {
-       console.error(error);
-      });
+      // be('2B4ovyUUsiJQcUcnAZYUaBnx6UpsWuaE')
+      // .users.search('roaldjap')
+      // .then(function success(results) {
+      //  console.log(results);
+      // }, function failure(error) {
+      //  console.error(error);
+      // });
 
     });
   </script>

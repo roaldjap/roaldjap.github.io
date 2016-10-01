@@ -179,7 +179,7 @@ p, div {
   }
 
   .content{
-    padding: 200px 30px;
+    padding: 120px 30px;
     display: block;
     background: url('../images/diamonds.png');
     background-repeat: no-repeat;
@@ -196,7 +196,58 @@ p, div {
     letter-spacing: 2px;
   }
 
+  p{
+    margin: 0 10px 20px;
+  }
+
+  p, li{
+    font-size: 1.3em;
+    line-height: 1.6em;
+  }
+
   .line{
     margin: 48px auto;
+  }
+
+  .contact-list{
+    padding: 0;
+    display: inline-block;
+    margin: 0 auto;
+    list-style: none;
+    text-align: left;
+    max-width: 520px;
+
+    .fa{
+      margin: 0 10px;
+      vertical-align: middle;
+      padding: 10px;
+      height: 50px;
+      width: 50px;
+      text-align: center;
+
+      &.fa-mobile{
+        font-size: 1.7em;
+      }
+
+    }
+
+  }
+}
+
+footer{
+  padding: 30px;
+  background: #3e3e3e;
+  font-weight: lighter;
+  text-transform: uppercase;
+  font-family: 'Open Sans';
+  color: #fff;
+
+  p{
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin: 0;
+    b{
+      font-family: "Montserrat";
+    }
   }
 }
