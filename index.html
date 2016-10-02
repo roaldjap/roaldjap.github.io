@@ -33,20 +33,34 @@
     $(document).ready(function() {
       $("html").niceScroll();
       smoothScroll.init();
-      // Using promises
-      // be('2B4ovyUUsiJQcUcnAZYUaBnx6UpsWuaE')
-      // .users.search('roaldjap')
-      // .then(function success(results) {
-      //  console.log(results);
-      // }, function failure(error) {
-      //  console.error(error);
-      // });
 
-      var source   = $("#entry-template").html();  // init handlebar template
-      var template = Handlebars.compile(source);   // compile handlebar template
-      var data = {title: "My New Post", body: "This is my first post!"}; // get the json object
-      var entryData    = template(data); // insert json object to handlebar template
-      $('#entry-data').html(entryData); // add the compiled handlebar template to actual desitnation of markup
+      function setUserTemplate(){
+        var source   = $("#entry-template").html();  // init handlebar template
+        var template = Handlebars.compile(source);   // compile handlebar template
+        var results = JSON.parse(sessionStorage.getItem('behanceProjects'));
+        var entryData    = template(results); // insert json object to handlebar template
+        $('#entry-data').html(entryData); // add the compiled handlebar template to actual desitnation of markup
+      }
+
+      be('2B4ovyUUsiJQcUcnAZYUaBnx6UpsWuaE')
+      .user.projects('roaldjap')
+      .then(function success(results) {
+        // console.log(results);
+        if(sessionStorage.getItem('behanceProjects')) {
+            setUserTemplate();
+            console.log("Getting from Local Storage!");
+        } else {
+            var data = JSON.stringify(results);
+            sessionStorage.setItem('behanceProjects', data);
+            setUserTemplate();
+            console.log("Saved!");
+        };
+
+        $('.loading-gallery').hide();
+
+      }, function failure(error) {
+       console.error(error);
+      });
     });
 
 
@@ -55,12 +69,29 @@
 
   <!-- Entry Template -->
   <script id="entry-template" type="text/x-handlebars-template">
-    <div class="entry">
-      <h3>{{title}}</h3>
-      <div class="body">
-        {{body}}
-      </div>
-    </div>
+        {{#each projects}}
+        <div class="portfolio-content">
+          <figure class="portfolio-cover" title="{{this.name}}">
+              {{#if this.covers.[404]}}
+              <img class="portfolio-image" src="{{this.covers.[404]}}" alt="">
+              {{else}}
+                  {{#if this.covers.[230]}}
+                  <img class="portfolio-image" src="{{this.covers.[230]}}" alt="">
+                  {{else}}
+                  <img class="portfolio-image" src="{{this.covers.[202]}}" alt="">
+                  {{/if}}
+              {{/if}}
+          </figure>
+          <h2 class="portfolio-title">{{this.name}}</h2>
+          <div class="portfolio-fields">
+              <ul class="field-list">
+              {{#each this.fields}}
+                  <li class="field-item">{{this}}</li>
+              {{/each}}
+              </ul>
+          </div>
+        </div>
+        {{/each}}
   </script>
 
 </head>
@@ -141,7 +172,9 @@
           <div class="col-lg-12">
             <h1>My Crafts</h1>
             <div class="line"></div>
-            <div id="entry-data"></div>
+            <div id="entry-data">
+              <div class="loading-gallery">Loading</div>
+            </div>
           </div>
         </div>
       </div>
