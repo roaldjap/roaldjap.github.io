@@ -37,7 +37,7 @@
       function setUserTemplate(){
         var source   = $("#entry-template").html();  // init handlebar template
         var template = Handlebars.compile(source);   // compile handlebar template
-        var results = JSON.parse(sessionStorage.getItem('behanceProjects'));
+        var results = JSON.parse(sessionStorage.getItem('behanceProjects')); // fetch from localStorage
         var entryData    = template(results); // insert json object to handlebar template
         $('#entry-data').html(entryData); // add the compiled handlebar template to actual desitnation of markup
       }
@@ -45,15 +45,15 @@
       be('2B4ovyUUsiJQcUcnAZYUaBnx6UpsWuaE')
       .user.projects('roaldjap')
       .then(function success(results) {
-        // console.log(results);
+
         if(sessionStorage.getItem('behanceProjects')) {
-            setUserTemplate();
-            console.log("Getting from Local Storage!");
+            setProjectTemplate();
+            // console.log("Retrieve data from Local Storage.");
         } else {
             var data = JSON.stringify(results);
             sessionStorage.setItem('behanceProjects', data);
             setUserTemplate();
-            console.log("Saved!");
+            // console.log("Saved new JSON file.");
         };
 
         $('.loading-gallery').hide();
