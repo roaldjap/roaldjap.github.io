@@ -15,18 +15,53 @@
   <meta name="theme-color" content="#ffffff">
   <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700|Montserrat:400,700|Open+Sans:300,400" rel="stylesheet">
 
-  <!-- Script -->
-  <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
-  <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="bower_components/jquery.nicescroll/dist/jquery.nicescroll.min.js"></script>
-
-  <script type="text/javascript" src="js/be.js/be.js"></script>
-
   <!-- Stylesheet  -->
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
   <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css" media="screen" title="no title" charset="utf-8">
   <link rel="stylesheet" href="css/style.min.css" media="screen" title="no title" charset="utf-8">
 
+  <!-- Script -->
+  <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="bower_components/jquery.nicescroll/dist/jquery.nicescroll.min.js"></script>
+  <script src="bower_components/smooth-scroll/dist/js/smooth-scroll.js"></script>
+  <script type="text/javascript" src="bower_components/handlebars/handlebars.min.js"></script>
+  <script type="text/javascript" src="js/be.js/be.js"></script>
+  <!-- Initialize-->
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("html").niceScroll();
+      smoothScroll.init();
+      // Using promises
+      // be('2B4ovyUUsiJQcUcnAZYUaBnx6UpsWuaE')
+      // .users.search('roaldjap')
+      // .then(function success(results) {
+      //  console.log(results);
+      // }, function failure(error) {
+      //  console.error(error);
+      // });
+
+      var source   = $("#entry-template").html();  // init handlebar template
+      var template = Handlebars.compile(source);   // compile handlebar template
+      var data = {title: "My New Post", body: "This is my first post!"}; // get the json object
+      var entryData    = template(data); // insert json object to handlebar template
+      $('#entry-data').html(entryData); // add the compiled handlebar template to actual desitnation of markup
+    });
+
+
+
+  </script>
+
+  <!-- Entry Template -->
+  <script id="entry-template" type="text/x-handlebars-template">
+    <div class="entry">
+      <h3>{{title}}</h3>
+      <div class="body">
+        {{body}}
+      </div>
+    </div>
+  </script>
 
 </head>
 <body>
@@ -106,6 +141,7 @@
           <div class="col-lg-12">
             <h1>My Crafts</h1>
             <div class="line"></div>
+            <div id="entry-data"></div>
           </div>
         </div>
       </div>
@@ -145,22 +181,5 @@
       &copy; 2016 - Designed and Developed By <b>Roald Jap Ignacio</b>
     </p>
   </footer>
-  <!-- Initialize-->
-  <script src="bower_components/smooth-scroll/dist/js/smooth-scroll.js"></script>
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $("html").niceScroll();
-      smoothScroll.init();
-      // Using promises
-      // be('2B4ovyUUsiJQcUcnAZYUaBnx6UpsWuaE')
-      // .users.search('roaldjap')
-      // .then(function success(results) {
-      //  console.log(results);
-      // }, function failure(error) {
-      //  console.error(error);
-      // });
-
-    });
-  </script>
 </body>
 </html>
