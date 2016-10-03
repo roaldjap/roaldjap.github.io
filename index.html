@@ -64,11 +64,13 @@
 
       });
 
-      $('nav #navbar a').on('click', function(){
-          $('.navbar-toggle').click() //bootstrap 3.x by Richard
-      });
     });
+
     if ($('window').width() < 768 ) {
+
+      $('nav #navbar a').on('click', function(){
+          $('.navbar-toggle').click(); //bootstrap 3.x by Richard
+      });
 
     }
 
