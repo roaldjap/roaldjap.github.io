@@ -65,6 +65,17 @@
       });
     });
 
+    $(window).scroll(function() {
+       var hT = $('.about').offset().top,
+           hH = $('.about').outerHeight(),
+           wH = $(window).height(),
+           wS = $(this).scrollTop();
+       if (wS > (hT+hH-wH)){
+           $('nav,#navbar').addClass('-shaded');
+       } else{
+           $('nav,#navbar').removeClass('-shaded');
+       }
+    });
 
   </script>
 
@@ -107,6 +118,7 @@
 </head>
 <body>
   <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="row">
     <div class="container-fluid">
 
         <div class="navbar-header">
@@ -139,6 +151,7 @@
             </li>
           </ul>
       </div>
+    </div>
     </div>
   </nav>
 
@@ -187,7 +200,12 @@
         </div>
 
         <div id="entry-data">
-          <div class="loading-gallery">Loading</div>
+          <div class="loading-gallery">
+            <p class="text-center">
+              PLEASE WAIT FOR A MOMENT...
+            </p>
+            <span class="cssload-loader"><span class="cssload-loader-inner"></span></span>
+          </div>
         </div>
 
       </div>
@@ -210,8 +228,8 @@
               Just contact me using the provided details below:
             </p>
             <ul class="contact-list">
-              <li class="mobile"><i class="fa fa-mobile"></i> +63 906 553 9147</li>
               <li class="email"> <i class="fa fa-envelope"></i> roaldjap@gmail.com</li>
+              <li class="mobile"><i class="fa fa-mobile"></i> +63 906 553 9147</li>
               <li class="facebook"><i class="fa fa-facebook"></i> facebook.com/roaldjap</li>
             </ul>
             </div>
