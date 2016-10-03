@@ -64,6 +64,9 @@
 
       });
     });
+    if ($('window').width() < 768 ) {
+
+    }
 
     $(window).scroll(function() {
        var hT = $('.about').offset().top,
@@ -75,8 +78,7 @@
        } else{
            $('nav,#navbar').removeClass('-shaded');
        }
-    });
-
+    });  
   </script>
 
   <!-- Entry Template -->

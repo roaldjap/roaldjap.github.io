@@ -27,17 +27,13 @@ nav{
   border: 0;
   transition: all .3s;
   height: 100px;
-
-  .container-fluid{
-    padding: 0;
-  }
 }
 
 #navbar{
   transition: all .3s;
 }
 
-nav.-shaded, #navbar.-shaded{
+nav.-shaded{
   background: rgba(197, 197, 197, 0.9);
 }
 
@@ -61,7 +57,6 @@ p, div {
 .navbar-nav{
 
   li {
-    margin: 20px;
 
     a{
       font-family: 'Open Sans';
@@ -76,7 +71,7 @@ p, div {
 .navbar-brand{
   display: block;
   height: auto;
-  padding: 15px 30px;
+  padding: 15px 0px;
 }
 
 .navbar-toggle{
@@ -402,6 +397,23 @@ footer{
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
   nav{
+    .navbar-brand{
+      padding: 15px 30px;
+    }
+
+    #navbar{
+      &.-shaded{
+        background: rgba(197, 197, 197, 0.9);
+      }
+      li{
+        a{
+          margin: 20px;
+        }
+      }
+    }
+    .container-fluid{
+      padding: 0;
+    }
 
     .r-logo{
       max-width: 50px;
