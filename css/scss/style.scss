@@ -397,11 +397,17 @@ footer{
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
   nav{
+    padding: 11px 10px;
+    height: 60px;
+    .navbar-header{
+      margin-top: -9px;
+    }
     .navbar-brand{
       padding: 15px 30px;
     }
 
     #navbar{
+
       &.-shaded{
         background: rgba(197, 197, 197, 0.9);
       }
@@ -416,7 +422,8 @@ footer{
     }
 
     .r-logo{
-      max-width: 50px;
+      max-width: 35px;
+      margin-top: -7px;
     }
   }
   .home{

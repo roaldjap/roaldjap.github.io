@@ -63,6 +63,10 @@
         console.error(error);
 
       });
+
+      $('nav #navbar a').on('click', function(){
+          $('.navbar-toggle').click() //bootstrap 3.x by Richard
+      });
     });
     if ($('window').width() < 768 ) {
 
@@ -78,7 +82,7 @@
        } else{
            $('nav,#navbar').removeClass('-shaded');
        }
-    });  
+    });
   </script>
 
   <!-- Entry Template -->
@@ -131,7 +135,7 @@
               <span class="icon-bar"></span>
             </button>
 
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="#home">
               <svg class="r-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127.8 148.6" preserveAspectRatio="xMidYMid meet" ><style type="text/css">
               	.logo-fill{fill:#777; opacity: 0.7; width: 20px;}
               </style><path class="logo-fill" d="M119.9 37.9L119.9 37.9l0 0c-0.2-1.2-0.5-2.4-0.8-3.5l-5.8-25.5L90.6 10c-4.5-0.9-9.6-1.4-15.2-1.4-14.3 0-27.2 3-27.7 3.2l-2.2 0.5-1.1 2L8.9 82.4 8.6 82.9l-0.1 0.6c-0.1 0.4-2.2 8.8-0.7 22.6 1.4 13.4 4.5 23.1 4.6 23.5l4.1 12.8 5.3-12.4 11.7-27.5c8.1 3.1 18.2 4.8 26.6 4.8 33.5 0 60.7-27.2 60.7-60.7C120.7 43.5 120.4 40.6 119.9 37.9zM13.3 84.7l35.6-68.1c0 0 12.6-3 26.6-3 11.1 0 23.1 1.9 30 8.9 8.9 8.9 2.5 25.6 2.5 25.6-5.9 16.7-34.2 23.2-44.2 27.4l16 22.4c0 0-3.4 1.6-11.1 2.4-1.2 0.1-2.4 0.2-3.6 0.2-5 0-9.6-0.9-9.6-0.9l-5-19.5-13.7 2-19.6 46c0 0-3-9.4-4.4-22.5C11.3 92.5 13.3 84.7 13.3 84.7z"/><path class="logo-fill" d="M89.7 44.4c4.5-15.4-25.8-11.9-30.1-12.7L40.5 70.8C40.5 70.8 84.4 62.3 89.7 44.4z"/></svg>
