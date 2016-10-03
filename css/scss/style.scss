@@ -31,10 +31,20 @@ nav{
 
 #navbar{
   transition: all .3s;
+  &.-shaded{
+    li{
+      a{
+        color: #2e2e2e;
+      }
+    }
+  }
 }
 
 nav.-shaded{
   background: rgba(197, 197, 197, 0.9);
+  .logo-fill{
+    fill: #2e2e2e;
+  }
 }
 
 /*h1, h2, h3, h4, h5, h6 {
@@ -410,6 +420,11 @@ footer{
 
       &.-shaded{
         background: rgba(197, 197, 197, 0.9);
+        li{
+          a{
+            color: #2e2e2e;
+          }
+        }
       }
       li{
         a{
@@ -424,6 +439,9 @@ footer{
     .r-logo{
       max-width: 35px;
       margin-top: -7px;
+      .logo-fill{
+        fill: #2e2e2e;
+      }
     }
   }
   .home{
