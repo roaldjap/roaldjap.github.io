@@ -515,7 +515,9 @@ footer{
     .navbar-brand{
       padding: 15px 30px;
     }
-
+    ul#navbar{
+        margin-right: 0px;
+    }
     #navbar{
 
       &.-shaded{
