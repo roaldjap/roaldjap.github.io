@@ -1,6 +1,33 @@
 //compileCompressed: ../style.min.css
 @import "loading";
 
+
+@keyframes arrowMovement {
+  0%   {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+    margin-top: 50px;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInOut {
+  0%   {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
 .clearfix:after {
      visibility: hidden;
      display: block;
@@ -145,6 +172,40 @@ p, div {
       height: 100%;
       overflow: hidden;
       background-size: 28%;
+  }
+
+  .down-action{
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    color: white;
+
+    .down-action-wrapper{
+        display: inline-block;
+    }
+
+    .icon{
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: -135px;
+      display: inline-block;
+      font-size: 58px;
+      line-height: 0;
+      padding: 15px;
+      -webkit-animation: arrowMovement 2s infinite;
+    }
+
+    .text{
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-weight: lighter;
+      display: block;
+      font-size: 12px;
+      -webkit-animation: fadeInOut 2s infinite;
+    }
   }
 }
 
