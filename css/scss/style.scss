@@ -1,627 +1,651 @@
 //compileCompressed: ../style.min.css
 @import "loading";
 @import "../../bower_components/bourbon/app/assets/stylesheets/bourbon";
-
-
 @keyframes arrowMovement {
-  0%   {
-    opacity: 0;
-  }
-  70% {
-    opacity: 1;
-    margin-top: 50px;
-  }
-  100% {
-    opacity: 0;
-  }
-}
+    0% {
+        opacity: 0;
+    }
 
+    70% {
+        opacity: 1;
+        margin-top: 50px;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
 @keyframes fadeInOut {
-  0%   {
-    opacity: 0;
-  }
-  70% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
+    0% {
+        opacity: 0;
+    }
 
+    70% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
 
 .clearfix:after {
-     visibility: hidden;
-     display: block;
-     font-size: 0;
-     content: " ";
-     clear: both;
-     height: 0;
-     }
-.clearfix { display: inline-block; }
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.clearfix {
+    display: inline-block;
+}
 /* start commented backslash hack \*/
-* html .clearfix { height: 1%; }
-.clearfix { display: block; }
+* html .clearfix {
+    height: 1%;
+}
+
+.clearfix {
+    display: block;
+}
 /* close commented backslash hack */
-
-html, body{
-  width: 100%;
-  height: 100%;
-  @include transition(all .3s);
+body,
+html {
+    width: 100%;
+    height: 100%;
+    @include transition(all .3s);
 }
 
-nav{
-  padding: 20px;
-  background: transparent;
-  border: 0;
-  @include transition(all .3s);
-  height: 100px;
+nav {
+    padding: 20px;
+    background: transparent;
+    border: 0;
+    @include transition(all .3s);
+    height: 100px;
 }
 
-#navbar{
-  @include transition(all .3s);
-  &.-shaded{
-    li{
-      a{
-        color: #2e2e2e;
-      }
+#navbar {
+    @include transition(all .3s);
+
+    &.-shaded {
+        li {
+            a {
+                color: #2e2e2e;
+            }
+        }
     }
-  }
 }
 
-nav.-shaded{
-  background: rgba(197, 197, 197, 0.9);
-  .logo-fill{
-    fill: #2e2e2e;
-  }
-}
+nav.-shaded {
+    background: rgba(197, 197, 197, 0.9);
 
+    .logo-fill {
+        fill: #2e2e2e;
+    }
+}
 /*h1, h2, h3, h4, h5, h6 {
     font-family: 'Open Sans';
 }
 p, div {
     font-family: 'Open Sans';
 }*/
-
-.navbar-default div.navbar-collapse{
-    border-top:none;
-    box-shadow:none;
+.navbar-default div.navbar-collapse {
+    border-top: none;
+    box-shadow: none;
 }
 
 .navbar-default {
-     background-color: transparent;
-     border-color: transparent;
-     vertical-align: middle;
-}
-.navbar-nav{
-
-  li {
-
-    a{
-      font-family: 'Open Sans';
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 0.9em;
-      font-weight: lighter;
-    }
-  }
+    background-color: transparent;
+    border-color: transparent;
+    vertical-align: middle;
 }
 
-.navbar-brand{
-  display: block;
-  height: auto;
-  padding: 15px 0px;
-}
-
-.navbar-toggle{
-  margin-right: 30px;
-}
-
-.r-logo{
-  display: block;
-  width: 100%;
-  max-width: 60px;
-  margin-top: -15px;
-}
-
-.line{
-  display: block;
-  background: #fff;
-  margin: 48px 0;
-  width: 75px;
-  height: 10px;
-}
-
-
-.home{
-  background: rgba(255,255,255,1);
-  background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(221,221,221,1) 100%);
-  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(47%, rgba(246,246,246,1)), color-stop(100%, rgba(221,221,221,1)));
-  background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(221,221,221,1) 100%);
-  background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(221,221,221,1) 100%);
-  background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(221,221,221,1) 100%);
-  background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(221,221,221,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dddddd', GradientType=0 );
-  background-position: center;
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-
-  &:before {
-      content: "";
-      position: absolute;
-      display: block;
-      background: url('../images/ROALD-IGNACIO.png');
-      background-repeat: no-repeat;
-      background-position: center 75%;
-      background-attachment: fixed;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      background-size: 80%;
-  }
-
-
-  &:after {
-      content: "";
-      position: absolute;
-      display: block;
-      background: url(../images/roald-solo.png);
-      background-repeat: no-repeat;
-      background-position: center bottom;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      background-size: 28%;
-  }
-
-  .down-action{
-    position: absolute;
-    bottom: 50px;
-    left: 0;
-    right: 0;
-    z-index: 2;
-    color: white;
-
-    .down-action-wrapper{
-        display: inline-block;
-    }
-
-    .icon{
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: -135px;
-      display: inline-block;
-      font-size: 58px;
-      line-height: 0;
-      padding: 15px;
-      @include animation(arrowMovement 2s infinite);
-    }
-
-    .text{
-      text-transform: uppercase;
-      letter-spacing: 4px;
-      font-weight: lighter;
-      display: block;
-      font-size: 12px;
-      @include animation(fadeInOut 2s infinite);
-    }
-  }
-}
-
-
-
-.about{
-  background: rgba(255,255,255,1) url('../images/about-bg.jpg');
-  background-position: center;
-  background-size: cover;
-  width: 100%;
-  padding: 100px 30px;
-  color: #fff;
-  font-family: "Montserrat";
-
-  h1{
-    text-transform: uppercase;
-    font-size: 4em;
-    font-weight: bolder;
-    letter-spacing: 2px;
-  }
-
-  .left-column{
-    font-family: "Libre Baskerville";
-    font-size: 18px;
-    line-height: 2em;
-    font-style: italic;
-    font-weight: lighter;
-  }
-
-  .right-column{
-    font-size: 18px;
-    line-height: 1.8em;
-
-    p{
-      margin: 0 0 20px;
-    }
-  }
-
-}
-
-
-.work{
-  background: rgba(255,255,255,1) url('../images/work-bg.jpg');
-  background-position: left;
-  background-size: cover;
-  background-attachment: fixed;
-  overflow: hidden;
-  width: 100%;
-  padding: 100px 30px;
-  color: #fff;
-  font-family: "Montserrat";
-  p{
-    font-size: 18px;
-    line-height: 1.8em;
-    margin-bottom: 20px;
-  }
-  .description{
-    font-family: "Libre Baskerville";
-  }
-  .follow-links{
-    padding: 0;
-    display: inline-block;
-    margin: 0 auto;
-    list-style: none;
-    text-align: left;
-    margin-left: -23px;
-
-    a{
-      color: #fff;
-      text-decoration: none;
-      @include transition(all .3s);
-      cursor: pointer;
-      &:hover{
-        opacity: 0.5;
-      }
-    }
-
-    .fa{
-      margin: 0 10px;
-      line-height: 28px;
-      vertical-align: middle;
-      padding: 10px;
-      height: 50px;
-      width: 50px;
-      text-align: center;
-      font-size: 25px;
-
-    }
-  }
-  .portfolio-content{
-    &:hover{
-      .portfolio-cover{
-        opacity: 1;
-      }
-      .portfolio-overlay{
-        opacity: 1;
-      }
-    }
-
-    .portfolio-cover{
-      cursor: pointer;
-      @include transition(all .3s);
-      opacity: 0.3;
-      img{
-        display: block;
-        width: 100%;
-      }
-    }
-
-    .portfolio-overlay{
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      background: rgba(0,0,0,0);
-      background: -moz-radial-gradient(top, ellipse cover, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
-      background: -webkit-gradient(radial, top center, 0px, top center, 100%, color-stop(0%, rgba(0,0,0,0)), color-stop(0%, rgba(0,0,0,0)), color-stop(100%, rgba(0,0,0,1)));
-      background: -webkit-radial-gradient(top, ellipse cover, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
-      background: -o-radial-gradient(top, ellipse cover, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
-      background: -ms-radial-gradient(top, ellipse cover, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
-      background: radial-gradient(ellipse at top, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=1 );
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      @include transition(all .3s);
-      z-index: 100;
-      opacity: 0;
-      h4,ul{
-        text-shadow: 0px 3px 7px rgba(50, 50, 50, 1);
-      }
-
-      ul{
-        list-style: none;
-        text-align: center;
-        padding: 0;
-      }
-
-      .btn{
-        text-transform: uppercase;
-        border-radius: 0px;
-        border-width: 2px;
-        color: #fff;
-        background: transparent;
-        text-shadow: 0px 1px 1px rgba(50, 50, 50, 1);
-        &:hover{
-          transition: .3s;
-          background: #fff;
-          color: #000;
+.navbar-nav {
+    li {
+        a {
+            font-family: 'Open Sans';
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.9em;
+            font-weight: lighter;
         }
-      }
     }
-
-  }
-
-
-  h1{
-    text-transform: uppercase;
-    font-size: 4em;
-    font-weight: bolder;
-    letter-spacing: 2px;
-  }
 }
 
-.contact{
-  background: #505050;
-  background-position: left;
-  background-size: cover;
-  background-attachment: fixed;
-  width: 100%;
-  color: #fff;
-  font-family: "Montserrat";
-  text-align: center;
-
-  .diamonds{
-    position: absolute;
+.navbar-brand {
     display: block;
-    background: url('../images/diamonds.png');
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: top;
-    width: 100%;
-    height: 735px;
-    margin-top: -50px;
-  }
+    height: auto;
+    padding: 15px 0;
+}
 
-  .content{
-    padding: 120px 30px;
+.navbar-toggle {
+    margin-right: 30px;
+}
+
+.r-logo {
     display: block;
-    background: url('../images/diamonds.png');
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: top center;
     width: 100%;
-  }
+    max-width: 60px;
+    margin-top: -15px;
+}
 
-  h1{
+.line {
+    display: block;
+    background: #fff;
+    margin: 48px 0;
+    width: 75px;
+    height: 10px;
+}
+
+.home {
+    background: rgba(255,255,255,1);
+    background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(221,221,221,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(47%, rgba(246,246,246,1)), color-stop(100%, rgba(221,221,221,1)));
+    background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(221,221,221,1) 100%);
+    background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(221,221,221,1) 100%);
+    background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(221,221,221,1) 100%);
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(221,221,221,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr= '#ffffff', endColorstr='#dddddd', GradientType=0 );
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+
+    &:before {
+        content: "";
+        position: absolute;
+        display: block;
+        background: url('../images/ROALD-IGNACIO.png');
+        background-repeat: no-repeat;
+        background-position: center 75%;
+        background-attachment: fixed;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background-size: 80%;
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        display: block;
+        background: url("../images/roald-solo.png");
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background-size: 28%;
+    }
+
+    .down-action {
+        position: absolute;
+        bottom: 50px;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        color: white;
+
+        .down-action-wrapper {
+            display: inline-block;
+        }
+
+        .icon {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: -135px;
+            display: inline-block;
+            font-size: 58px;
+            line-height: 0;
+            padding: 15px;
+            @include animation(arrowMovement 2s infinite);
+        }
+
+        .text {
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-weight: lighter;
+            display: block;
+            font-size: 12px;
+            @include animation(fadeInOut 2s infinite);
+        }
+    }
+}
+
+.about {
+    background: rgba(255,255,255,1) url('../images/about-bg.jpg');
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    padding: 100px 30px;
+    color: #fff;
+    font-family: "Montserrat";
+
+    h1 {
+        text-transform: uppercase;
+        font-size: 4em;
+        font-weight: bolder;
+        letter-spacing: 2px;
+    }
+
+    .left-column {
+        font-family: "Libre Baskerville";
+        font-size: 18px;
+        line-height: 2em;
+        font-style: italic;
+        font-weight: lighter;
+    }
+
+    .right-column {
+        font-size: 18px;
+        line-height: 1.8em;
+
+        p {
+            margin: 0 0 20px;
+        }
+    }
+}
+
+.work {
+    background: rgba(255,255,255,1) url('../images/work-bg.jpg');
+    background-position: left;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+    width: 100%;
+    padding: 100px 30px;
+    color: #fff;
+    font-family: "Montserrat";
+
+    p {
+        font-size: 18px;
+        line-height: 1.8em;
+        margin-bottom: 20px;
+    }
+
+    .description {
+        font-family: "Libre Baskerville";
+    }
+
+    .follow-links {
+        padding: 0;
+        display: inline-block;
+        margin: 0 auto;
+        list-style: none;
+        text-align: left;
+        margin-left: -23px;
+
+        a {
+            color: #fff;
+            text-decoration: none;
+            @include transition(all .3s);
+            cursor: pointer;
+
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+
+        .fa {
+            margin: 0 10px;
+            line-height: 28px;
+            vertical-align: middle;
+            padding: 10px;
+            height: 50px;
+            width: 50px;
+            text-align: center;
+            font-size: 25px;
+        }
+    }
+
+    .portfolio-content {
+        &:hover {
+            .portfolio-cover {
+                opacity: 1;
+            }
+
+            .portfolio-overlay {
+                opacity: 1;
+            }
+        }
+
+        .portfolio-cover {
+            cursor: pointer;
+            @include transition(all .3s);
+            opacity: 0.3;
+
+            img {
+                display: block;
+                width: 100%;
+            }
+        }
+
+        .portfolio-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: rgba(0,0,0,0);
+            background: -moz-radial-gradient(top, ellipse cover, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+            background: -webkit-gradient(radial, top center, 0px, top center, 100%, color-stop(0%, rgba(0,0,0,0)), color-stop(0%, rgba(0,0,0,0)), color-stop(100%, rgba(0,0,0,1)));
+            background: -webkit-radial-gradient(top, ellipse cover, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+            background: -o-radial-gradient(top, ellipse cover, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+            background: -ms-radial-gradient(top, ellipse cover, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+            background: radial-gradient(ellipse at top, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr= '#000000', endColorstr='#000000', GradientType=1 );
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            @include transition(all .3s);
+            z-index: 100;
+            opacity: 0;
+
+            h4,
+            ul {
+                text-shadow: 0 3px 7px rgba(50, 50, 50, 1);
+            }
+
+            ul {
+                list-style: none;
+                text-align: center;
+                padding: 0;
+            }
+
+            .btn {
+                text-transform: uppercase;
+                border-radius: 0;
+                border-width: 2px;
+                color: #fff;
+                background: transparent;
+                text-shadow: 0 1px 1px rgba(50, 50, 50, 1);
+
+                &:hover {
+                    transition: 0.3s;
+                    background: #fff;
+                    color: #000;
+                }
+            }
+        }
+    }
+
+    h1 {
+        text-transform: uppercase;
+        font-size: 4em;
+        font-weight: bolder;
+        letter-spacing: 2px;
+    }
+}
+
+.contact {
+    background: #505050;
+    background-position: left;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    color: #fff;
+    font-family: "Montserrat";
+    text-align: center;
+
+    .diamonds {
+        position: absolute;
+        display: block;
+        background: url('../images/diamonds.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: top;
+        width: 100%;
+        height: 735px;
+        margin-top: -50px;
+    }
+
+    .content {
+        padding: 120px 30px;
+        display: block;
+        background: url('../images/diamonds.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: top center;
+        width: 100%;
+    }
+
+    h1 {
+        text-transform: uppercase;
+        font-size: 4em;
+        font-weight: bolder;
+        letter-spacing: 2px;
+    }
+
+    p {
+        margin: 0 10px 20px;
+        font-family: "Libre Baskerville";
+    }
+
+    li,
+    p {
+        font-size: 1.3em;
+        line-height: 1.6em;
+    }
+
+    .line {
+        margin: 48px auto;
+    }
+
+    .contact-list {
+        padding: 0;
+        display: inline-block;
+        margin: 0 auto;
+        list-style: none;
+        text-align: left;
+        max-width: 520px;
+
+        .fa {
+            margin: 0 10px;
+            line-height: 28px;
+            vertical-align: middle;
+            padding: 10px;
+            height: 50px;
+            width: 50px;
+            text-align: center;
+
+            &.fa-mobile {
+                font-size: 1.7em;
+            }
+        }
+    }
+}
+
+footer {
+    padding: 30px;
+    background: #3e3e3e;
+    font-weight: lighter;
     text-transform: uppercase;
-    font-size: 4em;
-    font-weight: bolder;
-    letter-spacing: 2px;
-  }
+    font-family: 'Open Sans';
+    color: #fff;
 
-  p{
-    margin: 0 10px 20px;
-    font-family: "Libre Baskerville";
-  }
+    p {
+        font-size: 12px;
+        letter-spacing: 2px;
+        margin: 0;
 
-  p, li{
-    font-size: 1.3em;
-    line-height: 1.6em;
-  }
-
-  .line{
-    margin: 48px auto;
-  }
-
-  .contact-list{
-    padding: 0;
-    display: inline-block;
-    margin: 0 auto;
-    list-style: none;
-    text-align: left;
-    max-width: 520px;
-
-    .fa{
-      margin: 0 10px;
-      line-height: 28px;
-      vertical-align: middle;
-      padding: 10px;
-      height: 50px;
-      width: 50px;
-      text-align: center;
-
-      &.fa-mobile{
-        font-size: 1.7em;
-      }
-
+        b {
+            font-family: "Montserrat";
+        }
     }
-
-  }
 }
-
-footer{
-  padding: 30px;
-  background: #3e3e3e;
-  font-weight: lighter;
-  text-transform: uppercase;
-  font-family: 'Open Sans';
-  color: #fff;
-
-  p{
-    font-size: 12px;
-    letter-spacing: 2px;
-    margin: 0;
-    b{
-      font-family: "Montserrat";
-    }
-  }
-}
-
-
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
-  .home{
-    &:before{
-      background-size: 900px;
-    }
-    &:after{
-      background-size: 300px;
-    }
-  }
+    .home {
+        &:before {
+            background-size: 900px;
+        }
 
+        &:after {
+            background-size: 300px;
+        }
+    }
 }
-
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
-  .about{
-    h1{
-      font-size: 3em;
+    .about {
+        h1 {
+            font-size: 3em;
+        }
     }
-  }
 
-  .work{
-    h1{
-      font-size: 3em;
+    .work {
+        h1 {
+            font-size: 3em;
+        }
     }
-  }
 
-  .contact{
-    h1{
-      font-size: 3em;
+    .contact {
+        h1 {
+            font-size: 3em;
+        }
     }
-  }
 }
-
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
-  nav{
-    padding: 11px 10px;
-    height: 60px;
-    .navbar-header{
-      margin-top: -9px;
-    }
-    .navbar-brand{
-      padding: 15px 30px;
-    }
-    ul#navbar{
-        margin-right: 0px;
-    }
-    #navbar{
+    nav {
+        padding: 11px 10px;
+        height: 60px;
 
-      &.-shaded{
-        background: rgba(197, 197, 197, 0.9);
-        li{
-          a{
-            color: #2e2e2e;
+        .navbar-header {
+            margin-top: -9px;
+        }
+
+        .navbar-brand {
+            padding: 15px 30px;
+        }
+
+        ul#navbar {
+            margin-right: 0;
+        }
+
+        #navbar{
+          li {
+              a {
+                  margin: -9px 20px;
+              }
           }
         }
-      }
-      li{
-        a{
-          margin: 20px;
+
+        .container-fluid {
+            padding: 0;
         }
-      }
-    }
-    .container-fluid{
-      padding: 0;
+
+        .r-logo {
+            max-width: 35px;
+            margin-top: -7px;
+
+            .logo-fill {
+                fill: #2e2e2e;
+            }
+        }
     }
 
-    .r-logo{
-      max-width: 35px;
-      margin-top: -7px;
-      .logo-fill{
-        fill: #2e2e2e;
-      }
+    .home {
+        &:before {
+            background-size: 1200px;
+        }
+
+        &:after {
+            background-size: 500px;
+        }
     }
-  }
-  .home{
-    &:before{
-      background-size: 1200px;
+
+    .contact {
+        .diamonds {
+            height: 400px;
+        }
     }
-    &:after{
-      background-size: 500px;
-    }
-  }
-   .contact {
-     .diamonds{
-         height: 400px;
-     }
-   }
 }
-
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
-  .home{
-    &:before{
-      background-size: 1200px;
-    }
-    &:after{
-      background-size: 90%;
-    }
-  }
+    #navbar {
+        li {
+            a {
+                margin: 20px;
+            }
+        }
 
-  .contact {
-    p, li{
-      font-size: 16px;
+        &.-shaded {
+            background: rgba(197, 197, 197, 0.9);
+            li {
+                a {
+                    color: #2e2e2e;
+                    margin: 20px;
+                }
+            }
+        }
     }
-    .contact-list{
-      li{
-        font-size: 15px;
-      }
-      .fa{
-        margin: 0 auto;
-        margin-left: -10px;
-        padding-right: 0;
-      }
+
+    .home {
+        &:before {
+            background-size: 1200px;
+        }
+
+        &:after {
+            background-size: 90%;
+        }
     }
-  }
+
+    .contact {
+        li,
+        p {
+            font-size: 16px;
+        }
+
+        .contact-list {
+            li {
+                font-size: 15px;
+            }
+
+            .fa {
+                margin: 0 auto 0 -10px;
+                padding-right: 0;
+            }
+        }
+    }
 }
-
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px) {
-  .about{
-    h1{
-      font-size: 2.3em;
+    .about {
+        h1 {
+            font-size: 2.3em;
+        }
     }
-  }
 
-  .work{
-    h1{
-      font-size: 2.3em;
+    .work {
+        h1 {
+            font-size: 2.3em;
+        }
     }
-  }
 
-  .contact{
-    h1{
-      font-size: 2.3em;
+    .contact {
+        h1 {
+            font-size: 2.3em;
+        }
     }
-  }
 
-  nav{
-    height: 58px;
-  }
-  .navbar-brand{
-    padding: 15px 20px;
-  }
-  .contact{
-    .contact-list{
-      li{
-        font-size: 14px;
-      }
+    nav {
+        height: 58px;
     }
-  }
 
+    .navbar-brand {
+        padding: 15px 20px;
+    }
+
+    .contact {
+        .contact-list {
+            li {
+                font-size: 14px;
+            }
+        }
+    }
 }
