@@ -1,5 +1,6 @@
 //compileCompressed: ../style.min.css
 @import "loading";
+@import "../../bower_components/bourbon/app/assets/stylesheets/bourbon";
 
 
 @keyframes arrowMovement {
@@ -45,19 +46,19 @@
 html, body{
   width: 100%;
   height: 100%;
-  transition: all .3s;
+  @include transition(all .3s);
 }
 
 nav{
   padding: 20px;
   background: transparent;
   border: 0;
-  transition: all .3s;
+  @include transition(all .3s);
   height: 100px;
 }
 
 #navbar{
-  transition: all .3s;
+  @include transition(all .3s);
   &.-shaded{
     li{
       a{
@@ -195,7 +196,7 @@ p, div {
       font-size: 58px;
       line-height: 0;
       padding: 15px;
-      -webkit-animation: arrowMovement 2s infinite;
+      @include animation(arrowMovement 2s infinite);
     }
 
     .text{
@@ -204,7 +205,7 @@ p, div {
       font-weight: lighter;
       display: block;
       font-size: 12px;
-      -webkit-animation: fadeInOut 2s infinite;
+      @include animation(fadeInOut 2s infinite);
     }
   }
 }
@@ -276,7 +277,7 @@ p, div {
     a{
       color: #fff;
       text-decoration: none;
-      transition: all .3s;
+      @include transition(all .3s);
       cursor: pointer;
       &:hover{
         opacity: 0.5;
@@ -307,7 +308,7 @@ p, div {
 
     .portfolio-cover{
       cursor: pointer;
-      transition: all .3s;
+      @include transition(all .3s);
       opacity: 0.3;
       img{
         display: block;
@@ -333,7 +334,7 @@ p, div {
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      transition: all .3s;
+      @include transition(all .3s);
       z-index: 100;
       opacity: 0;
       h4,ul{
