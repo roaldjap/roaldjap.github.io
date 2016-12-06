@@ -59,27 +59,19 @@
                 $('#entry-data').html(entryData); // add the compiled handlebar template to actual desitnation of markup
             }
 
-            be('2B4ovyUUsiJQcUcnAZYUaBnx6UpsWuaE')
-                .user.projects('roaldjap')
-                .then(function success(results) {
+            $.getJSON( "http://roaldjap.herokuapp.com/", function(data){
 
-                    if (sessionStorage.getItem('behanceProjects')) {
-                        setProjectTemplate();
-                        console.log("Retrieve data from Local Storage.");
-                    } else {
-                        var data = JSON.stringify(results);
-                        sessionStorage.setItem('behanceProjects', data);
-                        setProjectTemplate();
-                        console.log("Saved new JSON file.");
-                    };
+              if (sessionStorage.getItem('behanceProjects')) {
+                  setProjectTemplate();
+                  console.log("Retrieve data from Local Storage.");
+              } else {
+                  var results = JSON.stringify(data);
+                  sessionStorage.setItem('behanceProjects', results);
+                  setProjectTemplate();
+                  console.log("Saved new JSON file.");
+              };
 
-                    $('.loading-gallery').hide();
-
-                }, function failure(error) {
-
-                    console.error(error);
-
-                });
+            });
 
         });
 
