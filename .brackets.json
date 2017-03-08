@@ -1,0 +1,13 @@
+{
+  "path": {
+    "css/scss/style.scss": {
+      "sass.enabled": true,
+      "sass.options": {
+        "outputDir": "../",
+        "output": "style.min.css",  
+        "imagePath": null,
+        "outputStyle": "compressed"
+      }
+    }
+  }
+}
