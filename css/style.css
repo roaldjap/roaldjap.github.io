@@ -329,6 +329,7 @@ p, div {
 
 .navbar-toggle {
   margin-right: 30px;
+  border-radius: 0;
 }
 
 .r-logo {
@@ -734,14 +735,17 @@ footer p b {
   nav .navbar-header {
     margin-top: -9px;
   }
+  nav .navbar-toggle {
+    margin-top: 15px;
+  }
   nav .navbar-brand {
-    padding: 15px 30px;
+    padding: 21px 30px 9px;
   }
   nav ul#navbar {
     margin-right: 0;
   }
   nav #navbar li a {
-    margin: -9px 20px;
+    margin: 0px 20px;
   }
   nav .container-fluid {
     padding: 0;
@@ -766,7 +770,7 @@ footer p b {
 
 @media only screen and (max-width: 762px) {
   nav.-shaded {
-    padding: 17px 20px;
+    padding: 11px 20px;
   }
   #navbar.navbar-nav.-shaded {
     background: #c5c5c5;

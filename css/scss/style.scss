@@ -127,6 +127,7 @@ p, div {
 
 .navbar-toggle {
     margin-right: 30px;
+    border-radius: 0;
 }
 
 .r-logo {
@@ -530,6 +531,7 @@ footer {
 }
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
+
     nav {
         padding: 11px 10px;
         height: 60px;
@@ -538,8 +540,12 @@ footer {
             margin-top: -9px;
         }
 
+        .navbar-toggle{
+            margin-top: 15px;
+        }
+
         .navbar-brand {
-            padding: 15px 30px;
+            padding: 21px 30px 9px;
         }
 
         ul#navbar {
@@ -549,7 +555,7 @@ footer {
         #navbar{
           li {
               a {
-                  margin: -9px 20px;
+                  margin: 0px 20px;
               }
           }
         }
@@ -587,7 +593,7 @@ footer {
 
 @media only screen and (max-width : 762px){
     nav.-shaded{
-        padding: 17px 20px;
+        padding: 11px 20px;
     }
     
     #navbar{
