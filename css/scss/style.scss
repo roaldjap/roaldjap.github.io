@@ -79,9 +79,15 @@ nav {
 
 nav.-shaded {
     background: rgba(197, 197, 197, 0.9);
+    height: 70px;
+    padding: 10px 20px;
 
     .logo-fill {
         fill: #2e2e2e;
+    }
+    .r-logo{
+        max-width: 40px;
+        margin-top: -10px;
     }
 }
 /*h1, h2, h3, h4, h5, h6 {
@@ -128,6 +134,7 @@ p, div {
     width: 100%;
     max-width: 60px;
     margin-top: -15px;
+    @include transition(all .3s);
 }
 
 .line {
@@ -486,11 +493,23 @@ footer {
 
         &:after {
             background-size: 300px;
+            background-size: 50vh;
         }
     }
 }
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
+    .home {
+        &:before {
+            // background-size: 900px;
+            background-size: 100%;
+        }
+
+        &:after {
+            // background-size: 300px;
+            background-size: 70%;
+        }
+    }
     .about {
         h1 {
             font-size: 3em;
@@ -551,11 +570,11 @@ footer {
 
     .home {
         &:before {
-            background-size: 1200px;
+            background-size: 100%;
         }
 
         &:after {
-            background-size: 500px;
+            background-size: 50vh;
         }
     }
 
@@ -564,6 +583,26 @@ footer {
             height: 400px;
         }
     }
+}
+
+@media only screen and (max-width : 762px){
+    nav.-shaded{
+        padding: 17px 20px;
+    }
+    
+    #navbar{
+        &.navbar-nav.-shaded {
+            background: rgba(197,197,197,1);
+            margin: 1px -5px;
+            li {
+                a {
+                    color: #2e2e2e;
+                    margin: 20px;
+                }
+            }
+        }
+    }
+
 }
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
@@ -574,8 +613,9 @@ footer {
             }
         }
 
-        &.-shaded {
-            background: rgba(197, 197, 197, 0.9);
+        &.navbar-nav.-shaded {
+            background: rgba(197,197,197,1);
+            margin: 1px -5px;
             li {
                 a {
                     color: #2e2e2e;
@@ -613,8 +653,39 @@ footer {
         }
     }
 }
+
+@media only screen and (max-width: 425px){
+    .home{
+        &:before{
+            background-size: 100%;
+            background-position: 100%;
+        }
+        &:after{
+            background-size: 70%;
+        }
+    }
+}
+
+@media only screen and (max-width: 360px){
+    .home{
+        &:before{
+            background-size: 120%;
+            background-position: center;
+        }
+        &:after{
+            background-size: 90%;
+        }
+    }
+
+}
+
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px) {
+    .home {
+        &:after {
+            background-size: 90%;
+        }
+    }
     .about {
         h1 {
             font-size: 2.3em;
