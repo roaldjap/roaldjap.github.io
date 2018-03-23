@@ -375,7 +375,9 @@ p, div {
                 &:hover {
                     transition: 0.3s;
                     background: #fff;
-                    color: #000;
+                    color: #797979;
+                    border-color: transparent;
+                    text-shadow: none;
                 }
             }
         }
