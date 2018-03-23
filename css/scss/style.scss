@@ -167,12 +167,12 @@ p, div {
         display: block;
         background: url('../images/ROALD-IGNACIO.png');
         background-repeat: no-repeat;
-        background-position: center 75%;
+        background-position: center 50%;
         background-attachment: fixed;
         width: 100%;
         height: 100%;
         overflow: hidden;
-        background-size: 80%;
+        background-size: 900px;
     }
 
     &:after {
@@ -185,7 +185,7 @@ p, div {
         width: 100%;
         height: 100%;
         overflow: hidden;
-        background-size: 28%;
+        background-size: 50vh;
     }
 
     .down-action {
@@ -492,6 +492,7 @@ footer {
     .home {
         &:before {
             background-size: 900px;
+            background-position: center;
         }
 
         &:after {
@@ -505,12 +506,12 @@ footer {
     .home {
         &:before {
             // background-size: 900px;
-            background-size: 100%;
+            background-size: 80%;
         }
 
         &:after {
             // background-size: 300px;
-            background-size: 70%;
+            background-size: 50vh;
         }
     }
     .about {
@@ -578,7 +579,8 @@ footer {
 
     .home {
         &:before {
-            background-size: 100%;
+            background-size: 83%;
+            background-position: center 22%;
         }
 
         &:after {
@@ -635,11 +637,12 @@ footer {
 
     .home {
         &:before {
-            background-size: 1200px;
+            background-size: 80%;
+            background-position: center 18%;
         }
 
         &:after {
-            background-size: 90%;
+            background-size: 69%;
         }
     }
 
@@ -662,11 +665,35 @@ footer {
     }
 }
 
-@media only screen and (max-width: 425px){
+@media only screen and (max-width: 440px){
     .home{
         &:before{
-            background-size: 100%;
-            background-position: 100%;
+            background-size: 80%;
+            background-position: center 30%;
+        }
+        &:after{
+            background-size: 70%;
+        }
+    }
+}
+
+@media only screen and (max-width: 414px){
+    .home{
+        &:before{
+            background-size: 80%;
+            background-position: center 18%;
+        }
+        &:after{
+            background-size: 70%;
+        }
+    }
+}
+
+@media only screen and (max-width: 375px){
+    .home{
+        &:before{
+            background-size: 80%;
+            background-position: center 18%;
         }
         &:after{
             background-size: 70%;
@@ -677,11 +704,10 @@ footer {
 @media only screen and (max-width: 360px){
     .home{
         &:before{
-            background-size: 120%;
-            background-position: center;
+            background-position: center 18%;
         }
         &:after{
-            background-size: 90%;
+            background-size: 69%;
         }
     }
 
@@ -690,9 +716,7 @@ footer {
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px) {
     .home {
-        &:after {
-            background-size: 90%;
-        }
+        
     }
     .about {
         h1 {
@@ -728,3 +752,34 @@ footer {
         }
     }
 }
+
+
+// @media only screen 
+//     and (device-width : 375px) 
+//     and (device-height : 812px) 
+//     and (-webkit-device-pixel-ratio : 3) {
+//         .home{
+//             &:before{
+                
+//             }
+
+//             &:after{
+//                 background-size: 57vh;
+//             }
+//         }
+
+//     }
+
+// @media only screen 
+//     and (device-width : 375px) 
+//     and (device-height : 667px) 
+//     and (-webkit-device-pixel-ratio : 2) { 
+
+//     }
+
+// @media only screen 
+//     and (device-width : 375px) 
+//     and (device-height : 667px) 
+//     and (-webkit-device-pixel-ratio : 2) { 
+
+//     }
