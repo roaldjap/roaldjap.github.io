@@ -57,6 +57,10 @@ html {
     @include transition(all .3s);
 }
 
+.strike{
+    text-decoration: line-through;
+}
+
 nav {
     padding: 20px;
     background: transparent;
