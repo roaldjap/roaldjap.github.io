@@ -1,0 +1,26 @@
+{
+  "name": "roaldjap.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"live-server .\" \"npm run watch\"",
+    "watch": "node-sass -w ./css/scss/style.scss ./css/style.min.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roaldjap/roaldjap.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/roaldjap/roaldjap.github.io/issues"
+  },
+  "homepage": "https://github.com/roaldjap/roaldjap.github.io#readme",
+  "dependencies": {
+    "concurrently": "^5.0.2",
+    "live-server": "^1.2.1",
+    "node-sass": "^4.13.0"
+  }
+}
