@@ -209,7 +209,7 @@ html {
     transform: translateY(-50%); }
     .fullscreen .content > p {
       font-size: 16px;
-      max-width: 370px;
+      max-width: 333px;
       line-height: 1.7em;
       margin: 0 auto 20px; }
   .fullscreen > *, .fullscreen a {

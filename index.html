@@ -74,11 +74,13 @@
             $(".qr-icon").on("click", function(e){
                 e.preventDefault();
                 $(".fullscreen").fadeIn();
+                $("body").css("overflow", "hidden");
             });
 
             $(".fullscreen .close-button").on("click", function(e){
                 e.preventDefault();
                 $(".fullscreen").fadeOut();
+                $("body").css("overflow", "visible");
             });
 
         });
@@ -144,8 +146,8 @@
     <div class="fullscreen">
         <a class="close-button" href="#"><i class="fa fa-close"></i></a>
         <div class="content">
-            <p>Scan this QR code from your phone to add my contact details automatically</p>
-            <img src="/images/vcf.png" alt="Jap's vCard QRCode"/>
+            <p>Scan this QR code from your phone or tap it to call me</p>
+            <a href="tel:+64223968378"><img src="/images/vcf.png" alt="Jap's vCard QRCode"/></a>
         </div>
         
     </div>
@@ -287,7 +289,7 @@
                                 <ul class="contact-list">
                                     <li class="email"><a href="mailto:roaldjap@gmail.com?subject=Mail from your github page"><i class="fa fa-envelope"></i>roaldjap@gmail.com</a></li>
                                     <!-- <li class="mobile"><i class="fa fa-mobile"></i> +63 906 553 9147 (PH)</li> -->
-                                    <li class="mobile"><a href="tel:+64223968378" target="_blank"><i class="fa fa-mobile"></i> +64 22 3968 378 (NZ)</a></li>
+                                    <li class="mobile"><a href="tel:+64223968378"><i class="fa fa-mobile"></i> +64 22 3968 378 (NZ)</a></li>
                                     <li class="facebook"><a href="http://linkedin.com/in/roignacio" target="_blank"><i class="fa fa-linkedin-square"></i>linkedin.com/in/roignacio</a></li>
                                 </ul>
                                 <div class="qr-icon">
