@@ -171,7 +171,7 @@
   visibility: hidden;
   display: block;
   font-size: 0;
-  content: " ";
+  content: ' ';
   clear: both;
   height: 0; }
 
@@ -200,7 +200,7 @@ html {
   height: 100vh;
   position: fixed;
   z-index: 1031;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   display: none; }
   .fullscreen .content {
     text-align: center;
@@ -209,20 +209,22 @@ html {
     transform: translateY(-50%); }
     .fullscreen .content > p {
       font-size: 16px;
-      max-width: 333px;
+      max-width: 300px;
       line-height: 1.7em;
       margin: 0 auto 20px; }
-  .fullscreen > *, .fullscreen a {
+  .fullscreen > *,
+  .fullscreen a {
     color: #fff; }
   .fullscreen .close-button {
     font-size: 2em;
     position: absolute;
     top: 0;
     right: 0;
-    padding: .5em 1em; }
+    padding: 0.5em 1em; }
 
 .strike {
-  text-decoration: line-through; }
+  text-decoration: line-through;
+  color: #565656; }
 
 nav {
   padding: 20px;
@@ -312,7 +314,7 @@ p, div {
   height: 100%;
   text-align: center; }
   .home:before {
-    content: "";
+    content: '';
     position: absolute;
     display: block;
     background: url("../images/ROALD-IGNACIO.png");
@@ -324,7 +326,7 @@ p, div {
     overflow: hidden;
     background-size: 900px; }
   .home:after {
-    content: "";
+    content: '';
     position: absolute;
     display: block;
     background: url("../images/roald-solo.png");
@@ -372,14 +374,14 @@ p, div {
   width: 100%;
   padding: 100px 30px;
   color: #fff;
-  font-family: "Montserrat"; }
+  font-family: 'Montserrat'; }
   .about h1 {
     text-transform: uppercase;
     font-size: 4em;
     font-weight: bolder;
     letter-spacing: 2px; }
   .about .left-column {
-    font-family: "Libre Baskerville";
+    font-family: 'Libre Baskerville';
     font-size: 18px;
     line-height: 2em;
     font-style: italic;
@@ -403,13 +405,13 @@ p, div {
   width: 100%;
   padding: 100px 30px 200px;
   color: #fff;
-  font-family: "Montserrat"; }
+  font-family: 'Montserrat'; }
   .work p {
     font-size: 18px;
     line-height: 1.8em;
     margin-bottom: 20px; }
   .work .description {
-    font-family: "Libre Baskerville"; }
+    font-family: 'Libre Baskerville'; }
   .work .follow-links {
     padding: 0;
     display: inline-block;
@@ -504,7 +506,7 @@ p, div {
   background-attachment: fixed;
   width: 100%;
   color: #fff;
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
   text-align: center; }
   .contact .diamonds {
     position: absolute;
@@ -531,7 +533,7 @@ p, div {
     letter-spacing: 2px; }
   .contact p {
     margin: 0 10px 20px;
-    font-family: "Libre Baskerville"; }
+    font-family: 'Libre Baskerville'; }
   .contact li,
   .contact p {
     font-size: 1.3em;
@@ -566,7 +568,7 @@ p, div {
     margin-top: 80px;
     cursor: pointer; }
     .contact .qr-icon:before {
-      content: "";
+      content: '';
       position: absolute;
       width: 10em;
       height: 10em;
@@ -600,7 +602,7 @@ footer {
     letter-spacing: 2px;
     margin: 0; }
     footer p b {
-      font-family: "Montserrat"; }
+      font-family: 'Montserrat'; }
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
